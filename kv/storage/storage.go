@@ -5,6 +5,10 @@ import (
 	"github.com/pingcap-incubator/tinykv/proto/pkg/kvrpcpb"
 )
 
+const (
+	NotFoundError = "Key not found"
+)
+
 // Storage represents the internal-facing server part of TinyKV, it handles sending and receiving from other
 // TinyKV nodes. As part of that responsibility, it also reads and writes data to disk (or semi-permanent memory).
 type Storage interface {
